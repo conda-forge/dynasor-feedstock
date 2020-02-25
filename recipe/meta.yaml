@@ -22,11 +22,14 @@ requirements:
     - pip
   run:
     - python
+    - pip
     - numpy
 
 test:
   imports:
     - dsf
+  commands:
+    - pip check
 
 about:
   home: https://dynasor.materialsmodeling.org
