@@ -27,6 +27,8 @@ requirements:
 test:
   imports:
     - dsf
+  commands:
+    - pip check
 
 about:
   home: https://dynasor.materialsmodeling.org
