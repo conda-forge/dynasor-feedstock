@@ -1,66 +1,26 @@
-From eaa9e2e33a0983a8ae143a5ed118a8bef28dd91e Mon Sep 17 00:00:00 2001
-From: =?UTF-8?q?Jan=20Jan=C3=9Fen?= <janssen@mpie.de>
-Date: Thu, 6 May 2021 23:32:55 +0200
-Subject: [PATCH] Add config
+From 8596a9f1e108688bb48459e9a7ee43c811d7770b Mon Sep 17 00:00:00 2001
+From: Jan Janssen <jan-janssen@users.noreply.github.com>
+Date: Thu, 6 May 2021 23:53:05 +0200
+Subject: [PATCH] Update setup.py
 
 ---
- config.py | 50 ++++++++++++++++++++++++++++++++++++++++++++++++++
- 1 file changed, 50 insertions(+)
- create mode 100644 config.py
+ setup.py | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
 
-diff --git a/config.py b/config.py
-new file mode 100644
-index 0000000..43e18d0
---- /dev/null
-+++ b/config.py
-@@ -0,0 +1,50 @@
-+# Let local_compiler be None in order to use the default compiler
+diff --git a/setup.py b/setup.py
+index 9e59684..1812e35 100644
+--- a/setup.py
++++ b/setup.py
+@@ -3,8 +3,10 @@
+ import re
+ import sys
+ 
+-from config import (extra_compile_args, extra_link_args,
+-                    local_compiler, local_link_shared, local_linker)
 +local_compiler = None
-+local_linker = local_compiler
 +extra_compile_args = []
 +extra_link_args = []
-+local_link_shared = []
 +
-+# # Example: Explicitly use gcc
-+# #
-+# # local_compiler = 'gcc'
-+# extra_compile_args = ['-fPIC',
-+#                       '-Ofast',
-+#                       '-march=native',
-+#                       '-std=c99']
-+
-+# local_linker = local_compiler
-+# local_link_shared = ['-shared']
-+# extra_link_args = []
-+
-+
-+# # Example: Use icc instead of the default compiler
-+# #
-+# local_compiler = 'icc'
-+# extra_compile_args = ['-openmp', '-xHOST', '-O3',
-+#                       '-fno-alias', '-fPIC', '-std=c99']
-+
-+# local_linker = local_compiler
-+# local_link_shared = ['-shared']
-+# extra_link_args = ['-openmp']
-+
-+
-+# # Example: Use pgcc instead of the default compiler
-+# #
-+# local_compiler = 'pgcc'
-+# extra_compile_args = ['-mp=numa', '-O4', '-Msafeptr', '-fPIC', '-c99']
-+
-+# local_linker = local_compiler
-+# local_link_shared = ['-shared']
-+# extra_link_args = ['-mp']
-+
-+
-+# # Example: Use pgcc to generate GPU-code using OpenACC directives
-+# #
-+# local_compiler = 'pgcc'
-+# extra_compile_args = ['-acc', '-ta=nvidia', '-O4',
-+#                       '-g', '-Minfo=acc', '-fPIC']
-+
-+# local_linker = local_compiler
-+# local_link_shared = ['-shared']
-+# extra_link_args = ['-acc']
+ try:
+     from setuptools import setup, Extension
+ except ImportError:
