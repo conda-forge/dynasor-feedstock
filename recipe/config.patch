@@ -1,0 +1,26 @@
+From 8596a9f1e108688bb48459e9a7ee43c811d7770b Mon Sep 17 00:00:00 2001
+From: Jan Janssen <jan-janssen@users.noreply.github.com>
+Date: Thu, 6 May 2021 23:53:05 +0200
+Subject: [PATCH] Update setup.py
+
+---
+ setup.py | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+
+diff --git a/setup.py b/setup.py
+index 9e59684..1812e35 100644
+--- a/setup.py
++++ b/setup.py
+@@ -3,8 +3,10 @@
+ import re
+ import sys
+ 
+-from config import (extra_compile_args, extra_link_args,
+-                    local_compiler, local_link_shared, local_linker)
++local_compiler = None
++extra_compile_args = []
++extra_link_args = []
++
+ try:
+     from setuptools import setup, Extension
+ except ImportError:
