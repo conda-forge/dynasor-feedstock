@@ -1,5 +1,5 @@
 {% set name = "dynasor" %}
-{% set version = "1.1" %}
+{% set version = "1.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d10302bee98f2cfd163626bb284d7431cf033dec3f64c1263f1f4c3fae339fba
+  sha256: bc0e20018752d372540c24a6089d4b5680a24f329cedecec7494f88c07b2a764
   patches:
     - config.patch
 
