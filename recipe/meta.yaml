@@ -26,6 +26,9 @@ requirements:
     - python
     - pip
     - numpy
+    - ase
+    - importlib-metadata
+    - numba
 
 test:
   imports:
