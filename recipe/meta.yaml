@@ -27,7 +27,7 @@ requirements:
     - pip
     - numpy
     - ase
-    - importlib-metadata
+    - importlib-metadata <5
     - numba
 
 test:
