@@ -15,15 +15,16 @@ build:
   number: 0
   script: {{ PYTHON }} -m pip install . -vv
   skip: true  # [win or py2k]
+  skip: true  # [py > 310]
 
 requirements:
   build:
     - {{ compiler('c') }}
   host:
-    - python <3.11
+    - python
     - pip
   run:
-    - python <3.11
+    - python
     - pip
     - numpy
     - ase
