@@ -6,37 +6,34 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/dynasor-{{ version }}.tar.gz
   sha256: a19059a161b720fcc1d9ed5882a2b1724d9deefb5533acb8e964e3d0982d0b93
-  patches:
-    - config.patch
 
 build:
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
-  script: {{ PYTHON }} -m pip install . -vv
-  skip: true  # [win]
-  skip: true  # [py > 310]
-  skip: true  # [python_impl == 'pypy']
+  noarch: python
 
 requirements:
-  build:
-    - {{ compiler('c') }}
   host:
-    - python
+    - python >=3.8
     - pip
   run:
-    - python
-    - pip
-    - numpy
+    - python >=3.8
     - ase
+    - mdanalysis
+    - numba >=0.55
+    - numpy >=1.18
+    - pandas
     - importlib-metadata <5
-    - numba
 
 test:
   imports:
-    - dsf
+    - dynasor
   commands:
     - pip check
+  requires:
+    - pip
 
 about:
   home: https://dynasor.materialsmodeling.org
