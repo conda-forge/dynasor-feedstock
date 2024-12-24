@@ -1,13 +1,13 @@
 {% set name = "dynasor" %}
-{% set version = "2.0" %}
+{% set version = "2.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/dynasor-{{ version }}.tar.gz
-  sha256: a19059a161b720fcc1d9ed5882a2b1724d9deefb5533acb8e964e3d0982d0b93
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/dynasor-{{ version }}.tar.gz
+  sha256: 7d346e787a99cec8d92bccc69752d09ab11dc3d9f38adfde331c27b525e4a315
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
@@ -24,7 +24,7 @@ requirements:
     - mdanalysis
     - numba >=0.55
     - numpy >=1.18
-    - pandas
+    - pandas >=2.2
     - importlib-metadata <5
 
 test:
