@@ -1,5 +1,5 @@
 {% set name = "dynasor" %}
-{% set version = "2.2" %}
+{% set version = "2.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/dynasor-{{ version }}.tar.gz
-  sha256: e86aac13a0092a9bb9cd5c1dc1dd6d9873fd44034f53a2ddb27c448a189c2089
+  sha256: b9e582e0f6260b3d63d1428167eddfeb3518d51a42679abef64beac7927c06db
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
@@ -20,6 +20,7 @@ requirements:
     - pip
     - setuptools
   run:
+    - scipy
     - python >=3.8
     - ase
     - mdanalysis
