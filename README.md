@@ -3,7 +3,7 @@ About dynasor-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/dynasor-feedstock/blob/main/LICENSE.txt)
 
-Home: https://dynasor.materialsmodeling.org
+Home: https://dynasor.materialsmodeling.org/
 
 Package license: MIT
 
@@ -11,7 +11,7 @@ Summary: A tool for calculating dynamical structure factors
 
 Development: https://gitlab.com/materials-modeling/dynasor
 
-Documentation: https://dynasor.materialsmodeling.org
+Documentation: https://dynasor.materialsmodeling.org/
 
 dynasor is a simple tool for calculating total and partial
 dynamical structure factors as well as current correlation
@@ -21,16 +21,14 @@ i.e., a file containing snapshots of the particle coordinates
 and optionally velocities that correspond to consecutive,
 equally spaced points in (simulation) time.
 
-
 Current build status
 ====================
 
 
-<table><tr><td>All platforms:</td>
+<table><tr>
+    <td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=9117&branchName=main">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/dynasor-feedstock?branchName=main">
-      </a>
+      <img src="https://img.shields.io/badge/noarch-disabled-lightgrey.svg" alt="noarch disabled">
     </td>
   </tr>
 </table>
