@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: dynasor
-  version: '2.4'
+  version: '2.5'
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/dynasor-${{ version }}.tar.gz
-  sha256: 5ffc16ea5506fd735e9ade06a9aace061b643e7700dd18fe65c6db03d9601006
+  sha256: c538a91107e64be4a1b71f39c9cd65ba0dd79ea3d44d39214a072b0b9864592d
 
 build:
   number: 0
@@ -27,7 +27,7 @@ requirements:
     - python >=${{ python_min }}
     - ase
     - mdanalysis
-    - numba >=0.55
+    - numba >=0.58
     - numpy >=1.18
     - pandas >=2.2
 tests:
